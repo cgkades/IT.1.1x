@@ -28,7 +28,10 @@ public class Employee {
 	}
 	
 	public Employee(String name, int contract, int years, String department) {
+		this.setName(name);
 		this.setContract(Contract.getContract(contract));
+		this.setYears(years);
+		this.setDepartment(department);
 	}
 	
 	public String getName(){
