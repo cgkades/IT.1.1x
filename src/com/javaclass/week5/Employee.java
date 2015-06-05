@@ -1,6 +1,6 @@
 package com.javaclass.week5;
 
-public class Employee {
+public class Employee implements Employed{
 	protected String name;
 	protected int years;
 	protected String department;
@@ -17,7 +17,7 @@ public class Employee {
 			this.value = contract_code;
 			this.name = contract_name;
 		}
-		public String getName(){return this.name();}
+		public String getName(){return this.name;}
 		public static Contract getContract(int contract_code){
 			
 			for (Contract contract :Contract.values()){
@@ -33,7 +33,7 @@ public class Employee {
 		this.setYears(years);
 		this.setDepartment(department);
 	}
-	
+	public Employee(){}
 	public String getName(){
 		return this.name;
 	}
@@ -66,19 +66,12 @@ public class Employee {
 	public void setContract(Contract contract) {
 		this.contract = contract;
 	}
-
-
-
-	public interface Employed {
-		double getSalary();
-	}
 	
 	public String toString(){
 		return  this.name + ":" + this.department + " department, " + this.contract.getName() + " contract, " + this.years + " years in the company, salary of " + getSalary() + " bitcoins.";
 	}
 	
-	protected double getSalary(){
-		
+	public double getSalary(){
 		return 0;
 	}
 }
