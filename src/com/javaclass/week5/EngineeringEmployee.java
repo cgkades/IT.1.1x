@@ -15,7 +15,7 @@ public class EngineeringEmployee extends Employee {
 	 * @param years
 	 * @param department
 	 */
-	public EngineeringEmployee(String name, int contract, int years,
+	public EngineeringEmployee(String name, Contract contract, int years,
 			String department) {
 		super(name, contract, years, department);
 		// TODO Auto-generated constructor stub

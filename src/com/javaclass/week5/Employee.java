@@ -39,14 +39,14 @@ public class Employee implements Employed{
 	 * @param years
 	 * @param department
 	 */
-	public Employee(String name, int contract, int years, String department) {
+	public Employee(String name, Contract contract, int years, String department) {
 		this.setName(name);
-		this.setContract(Contract.getContract(contract));
+		this.setContract(contract);
 		this.setYears(years);
 		this.setDepartment(department);
 	}
 	/*
-	 * Empty Constructor becauase the IDE didn't like not having it.
+	 * Empty Constructor because the IDE didn't like not having it.
 	 */
 	public Employee(){}
 	

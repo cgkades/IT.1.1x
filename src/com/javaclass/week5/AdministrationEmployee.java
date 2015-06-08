@@ -15,9 +15,8 @@ public class AdministrationEmployee extends Employee {
 	 * @param years
 	 * @param department
 	 */
-	public AdministrationEmployee(String name, int contract, int years,
-			String department) {
-		super(name, contract, years, department);
+	public AdministrationEmployee(String name, String department) {
+		super(name, Contract.TEMPORARY, 0, department);
 		// TODO Auto-generated constructor stub
 	}
 
