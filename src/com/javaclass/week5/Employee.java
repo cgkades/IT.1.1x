@@ -6,6 +6,11 @@ public class Employee implements Employed{
 	protected String department;
 	protected Contract contract;
 	
+	/**
+	 * Contract enum. Less elegant than I would like.
+	 * @author byoakum
+	 *
+	 */
 	protected enum Contract {
 		TEMPORARY (0, "temporary"),
 		TRAINING (1, "training"),
@@ -27,21 +32,31 @@ public class Employee implements Employed{
 		}
 	}
 	
+	/**
+	 * Class Constructor
+	 * @param name
+	 * @param contract
+	 * @param years
+	 * @param department
+	 */
 	public Employee(String name, int contract, int years, String department) {
 		this.setName(name);
 		this.setContract(Contract.getContract(contract));
 		this.setYears(years);
 		this.setDepartment(department);
 	}
+	/*
+	 * Empty Constructor becauase the IDE didn't like not having it.
+	 */
 	public Employee(){}
+	
+	
 	public String getName(){
 		return this.name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
 	
 	public int getYears() {
 		return years;
