@@ -23,13 +23,6 @@ public class Employee implements Employed{
 			this.name = contract_name;
 		}
 		public String getName(){return this.name;}
-		public static Contract getContract(int contract_code){
-			
-			for (Contract contract :Contract.values()){
-				if (contract_code == contract.value){return contract;}
-			}
-			throw new IllegalArgumentException("Invalid contract code: " + contract_code + ".");
-		}
 	}
 	
 	/**
